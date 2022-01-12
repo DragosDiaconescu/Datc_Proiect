@@ -1,0 +1,21 @@
+[
+  {
+    "name": "QueueTrigger_delete",
+    "scriptFile": "functions_delete.dll",
+    "entryPoint": "Company.Function.QueueTrigger_delete.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "myQueueItem",
+        "type": "queueTrigger",
+        "direction": "In",
+        "dataType": "String",
+        "queueName": "ambrosia-delete-queue",
+        "connection": "andreicristedatc6_STORAGE"
+      }
+    ]
+  }
+]

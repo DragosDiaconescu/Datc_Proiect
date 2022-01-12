@@ -1,0 +1,21 @@
+[
+  {
+    "name": "QueueTrigger_insert",
+    "scriptFile": "functions_create.dll",
+    "entryPoint": "Company.Function.QueueTrigger_insert.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "myQueueItem",
+        "type": "queueTrigger",
+        "direction": "In",
+        "dataType": "String",
+        "queueName": "ambrosia-insert-queue",
+        "connection": "andreicristedatc6_STORAGE"
+      }
+    ]
+  }
+]
